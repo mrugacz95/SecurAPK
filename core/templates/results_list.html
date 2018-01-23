@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Results{% endblock %}
+
+{% block content %}
+    {%  if apps %}
+    <ul>
+        {% for app in apps %}
+            <li><a href="{% url 'results' app.file %}">{{ app.name }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        No apps analized
+    {% endif %}
+{% endblock %}

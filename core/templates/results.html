@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Results{% endblock %}
+
+{% block content %}
+    {% if not app.ready %}
+    <p>
+        Ready: {{ app.ready }}
+    </p>
+        {% else %}
+        <p>Application: app.name</p>
+    {% endif %}
+{% endblock %}
